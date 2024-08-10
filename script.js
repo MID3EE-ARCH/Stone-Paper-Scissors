@@ -13,7 +13,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let humanChoice = prompt("Enter rock, paper, or scissors").toLowerCase();
+  let humanChoice = prompt("Choose rock, paper or scissors").toLowerCase();
   if (humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors") {
     humanChoice = "Invalid Input";
     alert("Invalid Input. Exiting the Program.");
