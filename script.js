@@ -2,11 +2,11 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
-  const computer = Math.floor(Math.random() * 3); 
+  const computer = Math.floor(Math.random() * 3);
   if (computer === 0) {
-    return "rock";    
+    return "rock";
   } else if (computer === 1) {
-    return "paper"; 
+    return "paper";
   } else {
     return "scissors";
   }
@@ -14,14 +14,18 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   let humanChoice = prompt("Choose rock, paper or scissors").toLowerCase();
-  if (humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors") {
+  if (
+    humanChoice !== "rock" &&
+    humanChoice !== "paper" &&
+    humanChoice !== "scissors"
+  ) {
     humanChoice = "Invalid Input";
     alert("Invalid Input. Exiting the Program.");
   }
   return humanChoice;
 }
 
-function playGame(){
+function playGame() {
   function playRound(humanChoice, computerChoice) {
     if (humanChoice === "Invalid Input") {
       console.log("Invalid Input");
@@ -48,14 +52,23 @@ function playGame(){
       humanScore += 1;
     }
   }
-    for (let index = 0; index < 5; index++) {
+  for (let index = 0; index < 5; index++) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
     if (humanSelection !== "Invalid Input") {
       playRound(humanSelection, computerSelection);
     }
   }
-  console.log(`Your Score ${humanScore}` );
-  console.log(`Computer Score ${computerScore}` );
+  if (humanScore > computerScore) {
+    console.log("Hurray !!You Won The Game");
+    console.log(`Your Score ${humanScore}`);
+    console.log(`Computer Score ${computerScore}`);
+  } else if (humanScore < computerScore) {
+    console.log("Bash!! You Lost The Game");
+    console.log(`Your Score ${humanScore}`);
+    console.log(`Computer Score ${computerScore}`);
+  }
+  console.log(`Your Score ${humanScore}`);
+  console.log(`Computer Score ${computerScore}`);
 }
 playGame();
