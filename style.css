@@ -10,3 +10,8 @@ body {
   );
   height: 100vh;
 }
+h1 {
+  color: white;
+  text-align: center;
+  padding: 10px;
+}

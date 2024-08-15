@@ -52,12 +52,10 @@ function playGame() {
       humanScore += 1;
     }
   }
-  for (let index = 0; index < 5; index++) {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    if (humanSelection !== "Invalid Input") {
-      playRound(humanSelection, computerSelection);
-    }
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
+  if (humanSelection !== "Invalid Input") {
+    playRound(humanSelection, computerSelection);
   }
   if (humanScore > computerScore) {
     console.log("Hurray !!You Won The Game");
