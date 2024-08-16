@@ -63,3 +63,19 @@ h1 {
   align-items: center;
   font-size: 1.5rem;
 }
+/* Add styles for draw and round outcome messages if needed */
+.scoreBoard.draw {
+  color: yellow; /* Example color for draw */
+}
+.scoreBoard.win {
+  color: green; /* Example color for win */
+}
+.scoreBoard.loss {
+  color: red; /* Example color for loss */
+}
+.result {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  margin: 2rem;
+}
