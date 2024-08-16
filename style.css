@@ -9,6 +9,7 @@ body {
     rgba(27, 24, 113, 1) 93.2%
   );
   height: 100vh;
+  color: white;
 }
 h1 {
   color: white;
@@ -22,6 +23,7 @@ h1 {
   align-items: center;
 }
 .container2 {
+  gap: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,12 +47,14 @@ h1 {
   align-items: center;
 }
 .buttons img {
+  border-radius: 50%;
   object-fit: contain;
   margin: 1vw;
   width: 100px;
   height: auto;
 }
 #reset button {
+  margin: 2rem;
   width: 100%;
   height: 100%;
   border: 2px solid white;

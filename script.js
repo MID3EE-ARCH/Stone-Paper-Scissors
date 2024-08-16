@@ -40,6 +40,7 @@ function playGame() {
       humanScore += 1;
     }
   }
+  scoreBoard();
   //---------------EventListener------------------
   rock.addEventListener("click", () => {
     let humanChoice = "rock";
