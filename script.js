@@ -6,6 +6,7 @@ let rock = document.querySelector("#rock");
 let paper = document.querySelector("#paper");
 let scissor = document.querySelector("#scissor");
 let reset = document.querySelector("#reset");
+let resetButton = document.querySelector("#resetButton");
 let scoreBoard = document.querySelector(".scoreBoard");
 let resultDiv = document.createElement("div");
 resultDiv.classList.add("result");
@@ -27,10 +28,14 @@ function getComputerChoice() {
 function checkWinner() {
   if (humanScore === 5) {
     gameOver = true;
-    resultDiv.textContent = "Congratulations! You Won!";
+    scoreBoard.textContent = "Congratulations! You Won!";
+    resetButton.textContent = "Play Again";
+    resultDiv.textContent = "GameOver !!";
   } else if (computerScore === 5) {
     gameOver = true;
-    resultDiv.textContent = "Sorry, You Lost!";
+    scoreBoard.textContent = "Sorry, You Lost!";
+    resetButton.textContent = "Play Again";
+    resultDiv.textContent = "GameOver !!";
   }
 }
 
@@ -91,6 +96,7 @@ function playGame() {
   reset.addEventListener("click", () => {
     resetGame();
   });
+  updateScoreBoard();
 }
 
 //------------------Calling playGame function----------------
