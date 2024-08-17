@@ -29,11 +29,13 @@ function checkWinner() {
   if (humanScore === 5) {
     gameOver = true;
     scoreBoard.textContent = "Congratulations! You Won!";
+    scoreBoard.classList.add("game-over");
     resetButton.textContent = "Play Again";
     resultDiv.textContent = "GameOver !!";
   } else if (computerScore === 5) {
     gameOver = true;
     scoreBoard.textContent = "Sorry, You Lost!";
+    scoreBoard.classList.add("game-over");
     resetButton.textContent = "Play Again";
     resultDiv.textContent = "GameOver !!";
   }
