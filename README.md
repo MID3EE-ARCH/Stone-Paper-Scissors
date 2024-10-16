@@ -1,4 +1,6 @@
 # Stone-Paper-Scissors
-I will be doing the Stone Paper Scissors Project of The Odin Project
 
-Credits
+[LIVE](https://devnchill.github.io/Rock-Paper-Scissors)
+
+- A classic game to challenge your reflexes built using html , css and javascript.
+
